@@ -2,4 +2,5 @@
 
 @use 'var';
 
-@use 'main/top';
+@use 'parts/common';
+@use 'main/side-nav';

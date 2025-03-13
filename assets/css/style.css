@@ -1,1 +1,8 @@
-/*# sourceMappingURL=style.css.map */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-nav {
+  background-color: #F8DD49;
+}/*# sourceMappingURL=style.css.map */
