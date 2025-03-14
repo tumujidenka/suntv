@@ -1,6 +1,11 @@
 @use '../var';
 
+body{
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN",  Arial, sans-serif;;
+}
+
 .container{
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
 }

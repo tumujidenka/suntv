@@ -2,5 +2,65 @@
 
 
 .side-nav{
-    background-color: #F8DD49;
+    width: 350px;
+    background-color: var.$mimosaYellow;
+    &__content{
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__logo{
+        display: flex;
+    }
+    &__logo-image{
+        img{
+            width: 50px;
+        }
+    }
+    &__logo-text{
+        font-size: 24px;
+        line-height: 50px;
+        height: 50px;
+        margin-left: 20px;
+        font-family: "Hiragino Kaku Gothic ProN";
+        font-weight: 400;
+    }
+    &__title{
+        margin-top: 8px;
+        font-size: 32px;
+        font-family: "Hiragino Kaku Gothic ProN";
+        font-weight: 400;
+    }
+
+    &__menu{
+        margin-top: 52px;
+        color: var.$white;
+        &-item{
+            margin-bottom: 54px;
+        }
+        &-title{
+            font-family: "Noto Sans";
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            letter-spacing:1px;
+            margin-bottom: 4px;
+        }
+        &-description{
+            font-size: 16px;
+        }
+    }
+    &__image{
+        width: 70%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    .side-nav{
+        display: none;
+    }
 }

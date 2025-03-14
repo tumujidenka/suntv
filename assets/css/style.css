@@ -1,8 +1,70 @@
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Arial, sans-serif;
+}
+
 .container {
   display: flex;
   flex-direction: row;
+  min-height: 100vh;
 }
 
 .side-nav {
+  width: 350px;
   background-color: #F8DD49;
+}
+.side-nav__content {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.side-nav__logo {
+  display: flex;
+}
+.side-nav__logo-image img {
+  width: 50px;
+}
+.side-nav__logo-text {
+  font-size: 24px;
+  line-height: 50px;
+  height: 50px;
+  margin-left: 20px;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-weight: 400;
+}
+.side-nav__title {
+  margin-top: 8px;
+  font-size: 32px;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-weight: 400;
+}
+.side-nav__menu {
+  margin-top: 52px;
+  color: #FFFFFF;
+}
+.side-nav__menu-item {
+  margin-bottom: 54px;
+}
+.side-nav__menu-title {
+  font-family: "Noto Sans";
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.side-nav__menu-description {
+  font-size: 16px;
+}
+.side-nav__image {
+  width: 70%;
+}
+.side-nav__image img {
+  width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .side-nav {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
