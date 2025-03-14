@@ -8,4 +8,10 @@ body{
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    &.open{
+        display: block;
+        position: relative;
+    }
 }
+
+
