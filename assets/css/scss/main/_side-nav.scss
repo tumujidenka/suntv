@@ -99,6 +99,7 @@
     // ハンバーガーメニューが開いた際の表示
     .container.open{
         .side-nav{
+            z-index: 10;
             opacity: 1;
             transition: all 0.3s ease;
             &__image{
