@@ -1,0 +1,239 @@
+@use '../var';
+
+
+.chance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 140px;
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    &__header {
+        text-align: center;
+        color: var.$orangeRed;
+        font-size: 72px;
+        font-weight: normal;
+        height: 155px;
+        line-height: 155px;
+        margin-bottom: 140px;
+        position: relative;
+        background-color: var.$lightYellow;
+        &::after{
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 120px solid transparent;
+            border-right: 120px solid transparent;
+            border-top: 80px solid var.$lightYellow;
+            transform: translateX(-50%);
+        }
+    }
+    
+    &__support-bar {
+        background-color: var.$sunshineYellow;
+        color: var.$white;
+        width: 95%;
+        margin: 0 auto;
+        padding: 18px 0;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        font-size: 32px;
+        font-weight: normal;
+        position: relative;
+        .sp{
+            display: none;
+        }
+        span.fontsize {
+            font-size: 16px;
+        }
+        &::after{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            content: '';
+            display: block;
+            width: 99%;
+            height: 90%;
+            border: 2px solid var.$white;
+            border-radius: 8px;
+        }
+    }
+    
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    
+    &__feature {
+        width: calc(33.33% - 20px);
+        height: 200px;
+        background-image: url('../media/support_bg.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        color: var.$darkGray;
+        &-title {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        &.feature-1{
+            .chance__feature-value{
+                font-size: 56px;
+                span{
+                    font-size: 24px;
+                }    
+            }
+            .chance__feature-subtitle{
+                line-height: 20px;
+                font-size: 12px;
+            }
+        }
+        &.feature-2,&.feature-3,&.feature-4{
+            .chance__feature-title{
+                margin-bottom: 18px;
+                span{
+                    font-size: 14px;
+                }
+            }
+            .chance__feature-value{
+                font-size: 40px;
+                span{
+                    font-size: 24px;
+                    font-weight: normal;
+                }
+            }
+        }
+        &.feature-5{
+            .chance__feature-title{
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 18px;
+            }
+            .chance__feature-value{
+                font-size: 40px;
+                margin-bottom: 16px;
+            }
+            .chance__feature-subtitle{
+                font-size: 24px;
+            }
+        }
+    }
+    &__apply-button {
+        display: inline-block;
+        background-color: var.$mintGreen;
+        margin: 0 auto;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 32px;
+        position: relative;
+        &-text {
+            padding: 5px 15px;
+        }
+    }
+    &__arrow-icon {
+        position: absolute;
+        right: -30px;
+        top: 64%;
+        width: 50px;
+        height: 50px;
+        background-image: url('../media/arrow.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    
+    @media (max-width: 768px) {
+        padding-bottom: 70px;
+        &__header{
+            font-size: 40px;
+            height: 110px;
+            line-height: 110px;
+            margin-bottom: 60px;
+            &::after{
+                bottom: -30px;
+                border-left: 40px solid transparent;
+                border-right: 40px solid transparent;
+                border-top: 30px solid var.$lightYellow;
+            }
+        }
+        &__support-bar{
+            font-size: 21px;
+            line-height: 30px;
+            .sp{
+                display: inline-block;
+            }
+            span.sp{
+                font-size: 14px;
+            }
+            span.fontsize{
+                font-size: 14px;
+            }
+            &::after{
+                width: 97%;
+            }
+        }
+        &__features {
+            display: block;
+            position: relative;
+            height: 720px;
+            width: 490px;
+            margin: 0 auto;
+        }
+        
+        &__feature {
+            position: absolute;
+            width: 50%;
+            margin: 0 auto;
+            left: 50%;
+            &.feature-1{
+                top: 0px;
+                transform: translateX(-50% - 30%);
+            }
+            &.feature-2{
+                top: 120px;
+                transform: translateX(-50% + 30%);
+            }
+            &.feature-3{
+                top: 240px;
+                transform: translateX(-50% - 30%);
+            }
+            &.feature-4{
+                top: 360px;
+                transform: translateX(-50% + 30%);
+            }
+            &.feature-5{
+                top: 480px;
+                transform: translateX(-50% - 30%);
+            }
+        }
+        
+        .feature-value {
+            font-size: 1.5rem;
+        }
+        
+        .header {
+            font-size: 2rem;
+        }
+    }        
+}
