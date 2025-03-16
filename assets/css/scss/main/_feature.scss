@@ -1,0 +1,372 @@
+@use '../var';
+
+.features {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-bottom: 140px;
+    &__header {
+        text-align: center;
+        margin-bottom: 100px;
+        &-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
+            &::before{
+                position: absolute;
+                top: -12px;
+                left: -45px;
+                content: '';
+                width: 35px;
+                height: 50px;
+                background-image: url('../media/headersideline_before.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+            &::after{
+                position: absolute;
+                top: -12px;
+                right: -45px;
+                content: '';
+                width: 35px;
+                height: 50px;
+                background-image: url('../media/headersideline_after.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+        }
+        &-text {
+            font-size: 24px;
+            color: var.$darkGray;
+            margin: 0;
+        }
+    }
+    &__title{
+        font-size: 72px;
+        color: var.$orangeRed;
+        font-weight: bold;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    &__section {
+        display: flex;
+        padding: 30px 20px;
+        gap: 40px;
+        border: 2px solid var.$sunshineYellow;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+    &__content {
+        width: 50%;
+    }
+    &__title-box {
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 48px;
+        text-align: center;
+        span.large{
+            font-size: 48px;
+        }
+        span.small{
+            font-size: 12px;
+        }
+        span.highlight{
+            color: var.$orangeRed;
+        }
+    }
+    &__text{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    &__schedule {
+        width: 50%;
+        &-table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        &-table thead tr:nth-child(1) th {
+            background-color: var.$sunshineYellow;
+            color: #fff;
+            padding: 8px;
+            text-align: center;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            font-size: 14px;
+            font-weight: normal;
+            border-left: 1px solid var.$sunshineYellow;
+            border-right: 1px solid  var.$sunshineYellow;
+            border-top: 1px solid  var.$sunshineYellow;
+        }
+
+        &-table tbody {
+            border: 1px solid var.$sunshineYellow;
+        }
+        &-table td {
+            border-right: 1px solid var.$sunshineYellow;
+            padding: 8px;
+            text-align: left;
+            font-size: 10px;
+            line-height: 14px;
+            width: 33%;
+        }
+        &-table thead tr:nth-child(1) td {
+            border-bottom: none;
+        }
+
+
+        /* ヘッダーの2行目（午前、午後、夕方以降）の背景色 */
+        &-table thead tr:nth-child(2) th {
+            background-color: var.$mimosaYellow;
+            color: var.$darkGray;
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 8px 0;
+            border-left: 1px solid var.$mimosaYellow;
+            border-right: 1px solid  var.$mimosaYellow;
+        }
+
+
+        
+    }
+
+    &__hotel{
+        &-title{
+            text-align: center;
+            width: 50%;
+            font-size: 24px;
+            font-weight: normal;
+            p span.small{
+                font-size: 12px;
+            }
+            p span.highlight{
+                color: var.$orangeRed;
+            }
+            p span.sp{
+                display: none;
+            }
+        }
+        &-name {
+            font-size: 24px;
+            font-weight: normal;
+            margin-top: 37px;
+            text-align: center;
+        }
+
+        &-text {
+            font-size: 14px;
+            margin-top: 48px;
+            text-align-last: left;
+            p{
+                line-height: 27px;
+            }
+        }
+        
+        &-button {
+            display: inline-block;
+            background-color: var.$sunshineYellow;
+            color: var.$white;
+            font-size: 24px;
+            padding: 15px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 15px;
+            &.sp{
+                display: none;
+            }
+        }
+        
+
+        &-content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+    }
+    &-image {
+        img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }    
+    }  
+    
+    &__price{
+        &-left{
+            width: 50%;
+            text-align: center;
+        }
+        &-title{
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        &-amount {
+            font-size: 24px;
+            margin-bottom: 55px;
+            span.large{
+                font-size: 48px;
+            }
+            span.small{
+                font-size: 14px;
+            }
+            span.highlight{
+                color: var.$orangeRed;
+            }
+        }
+        
+
+        &-content{
+            width: 50%;
+
+        }
+        &-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-text {
+            text-align: left;
+            font-size: 14px;
+            line-height: 27px;
+        }
+    }
+
+    &__button-container{
+        margin-top: 100px;
+        display: flex;
+    }
+
+
+    @media (max-width: 768px) {
+        padding-bottom: 70px;
+        &__header{
+            margin-bottom: 50px;
+            &-title{
+                margin-bottom: 32px;
+                &::before{
+                    left: -34px;
+                }
+                &::after{
+                    right: -34px;
+                }
+            }
+            &-text{
+                font-size: 21px;
+            }
+        }
+        &__title{
+            font-size: 40px;
+            &-box{
+                font-size: 21px;
+                span.large{
+                    font-size: 40px;
+                }
+            }
+        }
+
+        &__section{
+            flex-direction: column;
+            padding: 40px 8px 0;
+            gap: 35px;
+        }
+
+        &__content{
+            width: 100%;
+        }
+        &__schedule{
+            width: 100%;
+            &-table{
+                margin-bottom: 32px;
+            }
+        }
+
+        &__hotel{
+            &-title{
+                font-size: 21px;
+                width: 100%;
+                p{
+                    text-align-last: left;
+                    line-height: 32px;
+                }
+                p span.sp{
+                    display: inline-block;
+                }
+                &>p{
+                    padding: 0 50px;
+                }
+            }
+            &-name{
+                font-size: 21px;
+                margin-top: 8px;
+                padding: 0 50px;
+                text-align-last: left;
+            }
+            &-text{
+                margin-top: 38px;
+                p{
+                    font-size: 12px;
+                    line-height: 28px;
+                }
+            }
+            &-button.pc{
+                display: none;
+            }
+            &-button.sp{
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            &-content{
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+
+        &__price{
+            &-left{
+                width: 100%;
+            }
+            &-title{
+                font-size: 21px;
+                margin-bottom: 8px;
+            }
+            &-amount{
+                font-size: 21px;
+                margin-bottom: 40px;
+                span.large{
+                    font-size: 40px;
+                }
+
+            }
+            &-text{
+                font-size: 12px;
+            }
+            &-content{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__button-container{
+            margin-top: 50px;
+        }
+
+
+    }
+
+    
+
+}
+
+
+@media (max-width: 992px) {
+    .features__content {
+        flex-direction: column;
+    }
+}
