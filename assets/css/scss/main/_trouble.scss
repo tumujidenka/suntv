@@ -1,0 +1,192 @@
+@use '../var';
+
+// お悩み
+.trouble {
+    padding-top: 150px;
+    &__header {
+        text-align: center;
+        margin-bottom: 12px;
+        transform: translateY(-60px);
+        background-color: var.$white;
+        width: 70%;
+        min-width: 600px;
+        margin: 0 auto;
+    }
+    
+    &__header-tag {
+        color: var.$darkGray;
+        font-size: 16px;
+        margin-bottom: 5px;
+        span{
+            font-size: 8px;
+        }
+    }
+    
+    &__header-title {
+        font-size: 32px;
+        color: var.$darkGray;
+        position: relative;
+        display: inline-block;
+        span.check{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            transform: translateY(10px);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+    &__question-box {
+        border: 2px solid var.$sunshineYellow;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    &__question-text {
+        transform: translateY(-40px);
+        font-family: "Noto Sans JP";
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        font-size: 48px;
+        .sp{
+            display: none;
+        }
+    }
+    
+    &__highlight {
+        color: var.$orangeRed;
+    }
+    
+    &__concerns-container {
+        position: relative;
+        margin-top: 100px;
+        height: 670px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    &__person-image {
+        height: 430px;
+    }
+    
+    &__speech-bubble {
+        position: absolute;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 25px 20px;
+        height: 210px;
+        width: 290px;
+        font-size: 14px;
+        color: var.$darkGray;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        text-align: center;
+        .check{
+            display: none;
+            width: 20px;
+            height: 20px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+    &__bubble-1 {
+        background-image: url('../media/bubble1.png');
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    &__bubble-2 {
+        background-image: url('../media/bubble2.png');
+        top: 25%;
+        left: 74px;
+    }
+    
+    &__bubble-3 {
+        background-image: url('../media/bubble3.png');
+        top: 68%;
+        left: 4%;
+    }
+    
+    &__bubble-4 {
+        background-image: url('../media/bubble4.png');
+        top: 25%;
+        right: 74px;
+    }
+    
+    &__bubble-5 {
+        background-image: url('../media/bubble5.png');
+        top: 68%;
+        right: 4%;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 50px;
+        &__header{
+            //透明にしないと
+            min-width: 0;
+            transform: translateY(-14px);
+        }
+        &__header-tag{
+            background-color: var.$white;
+        }
+        &__header-title{
+            font-size: 16px;
+            span.check{
+                display: none;
+            }
+            span.sp-fontsize{
+                font-size: 12px;
+            }
+        }
+        &__question-text{
+            font-size: 32px;
+            transform: translateY(-8px);
+            .sp{
+                display: block;
+            }
+            .sp-fontsize{
+                font-size: 24px;
+            }
+        }
+        &__highlight {
+            font-size: 40px;
+        }
+
+
+        &__concerns-container {
+            min-height: 600px;
+            height: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+        
+        &__speech-bubble {
+            position:static;
+            margin: 15px auto;
+            padding: 25px 30px;
+            width: 90%;
+            height: 70px;
+            max-width: 100%;
+            background-image: none;
+            transform: none;
+            border: 2px solid var.$sunshineYellow;
+            border-radius: 8px;
+            text-align-last: left;
+            .check{
+                display: block;
+                margin-right: 20px;
+            }
+        }    
+    }
+}
