@@ -1,0 +1,129 @@
+@use '../var';
+
+// 強み
+.strengths {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 130px;
+    .apply-button{
+        margin-top: 100px;
+    }
+
+}
+
+.strengths__header {
+    text-align: center;
+    font-size: 32px;
+    border-top: 1px solid var.$sunshineYellow;
+    border-bottom: 1px solid var.$sunshineYellow;
+    width: 50%;
+    margin: 0 auto;
+    padding: 22px 0;
+}
+
+.strengths__title {
+    font-size: 72px;
+    color: var.$orangeRed;
+    margin-top: 42px;
+    margin-bottom: 116px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.strengths__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 50px;
+}
+
+.strengths__box {
+    padding: 50px 12px 36px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.strengths__image-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.strengths__number {
+    font-size: 80px;
+    font-weight: bold;
+    color: var.$sunshineYellow;
+    font-family: "Alfa Slab One";
+    letter-spacing: 13px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.strengths__title-sub {
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 38px;
+}
+
+.strengths__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.strengths__text {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.strengths__image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+.strengths__button {
+    margin-top: 24px;
+    padding: 15px 20px;
+    font-size: 24px;
+    background-color: var.$sunshineYellow;
+    color: var.$white;
+    font-weight: normal;
+    display: inline-block;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 767px) {
+    .strengths{
+        &__header{
+            font-size: 24px;
+            width: 90%;
+        }
+        &__title{
+            font-size: 40px;
+            margin-top: 32px;
+            margin-bottom: 108px;
+            &-sub{
+                font-size: 21px;
+            }
+        }
+        &__button{
+            font-size: 21px;
+        }
+
+
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    
+    }
+    
+}
