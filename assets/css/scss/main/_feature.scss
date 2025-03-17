@@ -83,7 +83,8 @@
         width: 50%;
         &-table{
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             margin-top: 15px;
             margin-bottom: 15px;
         }
@@ -102,7 +103,28 @@
         }
 
         &-table tbody {
-            border: 1px solid var.$sunshineYellow;
+            tr:nth-child(1) {
+                td{
+                    border-top: 1px solid  var.$sunshineYellow;
+                }
+                td:nth-child(1){
+                    border-left: 1px solid  var.$sunshineYellow;
+                }
+            }
+            tr:nth-child(2) {
+                td{
+                    border-bottom: 1px solid var.$sunshineYellow;
+                }
+                td:nth-child(1){
+                    border-left: 1px solid  var.$sunshineYellow;
+                }
+                td:first-child {
+                    border-bottom-left-radius: 5px;
+                }
+                td:last-child {
+                    border-bottom-right-radius: 5px;
+                }
+            }
         }
         &-table td {
             border-right: 1px solid var.$sunshineYellow;
@@ -112,10 +134,6 @@
             line-height: 14px;
             width: 33%;
         }
-        &-table thead tr:nth-child(1) td {
-            border-bottom: none;
-        }
-
 
         /* ヘッダーの2行目（午前、午後、夕方以降）の背景色 */
         &-table thead tr:nth-child(2) th {
