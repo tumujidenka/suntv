@@ -1351,6 +1351,7 @@ body {
   background-color: #FEB215;
   padding: 20px 0;
   width: 90%;
+  max-width: 670px;
   margin: 0 auto;
   border-radius: 8px;
   display: flex;
