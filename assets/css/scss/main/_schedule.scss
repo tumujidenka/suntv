@@ -1,0 +1,146 @@
+@use '../var';
+
+.schedule {
+    margin: 0 auto;
+    padding-bottom: 130px;
+
+    .course__title{
+        .sp{
+            display: none;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    &__item {
+        position: relative;        
+        border-radius: 5px;
+        background-color: var.$white;
+        padding: 60px 20px;
+        position: relative;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    &__period {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background-image: url('../media/schedule_bg.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        &-text {
+            color: var.$darkGray;
+            font-weight: bold;
+            font-size: 21px;
+        }
+    }
+
+    &__content {
+        max-width: 270px;
+        width: 270px;
+        margin: 0 auto;
+
+        min-height: 550px;
+    }
+
+    &__day{
+        font-size: 16px;
+        background-color: var.$sunshineYellow;
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
+        color: var.$white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        margin-bottom: 8px;
+        &-label {
+            background-color: var.$mimosaYellow;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 5px 8px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        &-text {
+            font-size: 16px;
+            font-weight: normal;
+            padding: 5px 0;
+            color: var.$darkGray;
+        
+            &--note p {
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+        }    
+    }
+
+    &__button-container{
+        display: flex;
+        .apply-button-text{
+            font-size: 24px;
+            line-height: 24px;
+            padding: 0;
+        }
+        .arrow-icon{
+            right: -10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule {
+        padding-bottom: 72px;
+        .courses__title{
+            text-align-last: left;
+            padding: 20px 30px;
+
+            .sp{
+                display: inline-block;
+            }
+        }
+    
+
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+        
+        &__title {
+            font-size: 24px;
+            padding: 8px 20px;
+        }
+        
+        &__period {
+            width: 60px;
+            height: 60px;
+            left: 20px;
+        }
+        
+        &__period-text {
+            font-size: 16px;
+        }
+        
+        &__content {
+            min-height: 450px; 
+            max-width: 80%;
+            width: 80%;
+        }
+    }
+}

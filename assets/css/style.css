@@ -1733,4 +1733,131 @@ body {
   .courses__price-includes-text {
     margin: 0 auto;
   }
+}
+
+.schedule {
+  margin: 0 auto;
+  padding-bottom: 130px;
+}
+.schedule .course__title .sp {
+  display: none;
+}
+.schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.schedule__item {
+  position: relative;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: 60px 20px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.schedule__period {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: url("../media/schedule_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.schedule__period-text {
+  color: #333333;
+  font-weight: bold;
+  font-size: 21px;
+}
+.schedule__content {
+  max-width: 270px;
+  width: 270px;
+  margin: 0 auto;
+  min-height: 550px;
+}
+.schedule__day {
+  font-size: 16px;
+  background-color: #FEB215;
+  padding: 8px 0;
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.schedule__info {
+  margin-bottom: 8px;
+}
+.schedule__info-label {
+  background-color: #F8DD49;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.schedule__info-text {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 5px 0;
+  color: #333333;
+}
+.schedule__info-text--note p {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.schedule__button-container {
+  display: flex;
+}
+.schedule__button-container .apply-button-text {
+  font-size: 24px;
+  line-height: 24px;
+  padding: 0;
+}
+.schedule__button-container .arrow-icon {
+  right: -10px;
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    padding-bottom: 72px;
+  }
+  .schedule .courses__title {
+    -moz-text-align-last: left;
+         text-align-last: left;
+    padding: 20px 30px;
+  }
+  .schedule .courses__title .sp {
+    display: inline-block;
+  }
+  .schedule__grid {
+    grid-template-columns: 1fr;
+  }
+  .schedule__title {
+    font-size: 24px;
+    padding: 8px 20px;
+  }
+  .schedule__period {
+    width: 60px;
+    height: 60px;
+    left: 20px;
+  }
+  .schedule__period-text {
+    font-size: 16px;
+  }
+  .schedule__content {
+    min-height: 450px;
+    max-width: 80%;
+    width: 80%;
+  }
 }/*# sourceMappingURL=style.css.map */
