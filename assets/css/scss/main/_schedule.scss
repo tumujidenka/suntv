@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding-bottom: 130px;
 
-    .course__title{
+    .courses__title{
         .sp{
             display: none;
         }
@@ -52,9 +52,7 @@
 
     &__content {
         max-width: 270px;
-        width: 270px;
         margin: 0 auto;
-
         min-height: 550px;
     }
 
@@ -100,7 +98,7 @@
             padding: 0;
         }
         .arrow-icon{
-            right: -10px;
+            right: -28px;
         }
     }
 }
@@ -111,6 +109,8 @@
         .courses__title{
             text-align-last: left;
             padding: 20px 30px;
+            width: 350px;
+            max-width: 90%;    
 
             .sp{
                 display: inline-block;
