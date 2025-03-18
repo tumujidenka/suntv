@@ -1,7 +1,15 @@
 @use '../var';
 
 body{
-    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN",  Arial, sans-serif;;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN",  Arial, sans-serif;
+    background-image: repeating-linear-gradient(
+        45deg, 
+        rgba(248, 221, 73, 0.03) 0px, 
+        rgba(248, 221, 73, 0.03) 10px, 
+        transparent 5px, 
+        transparent 30px
+        );
+    background-size: 100% auto; /* 斜線の間隔調整 */
 }
 
 .container{

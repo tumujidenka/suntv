@@ -1,6 +1,8 @@
 @charset "UTF-8";
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Arial, sans-serif;
+  background-image: repeating-linear-gradient(45deg, rgba(248, 221, 73, 0.03) 0px, rgba(248, 221, 73, 0.03) 10px, transparent 5px, transparent 30px);
+  background-size: 100% auto; /* 斜線の間隔調整 */
 }
 
 .container {
@@ -981,6 +983,7 @@ html {
   padding: 50px 12px 36px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
 }
 .strengths__image-box {
   display: flex;
@@ -1129,6 +1132,7 @@ html {
   border: 2px solid #FEB215;
   border-radius: 10px;
   margin-bottom: 50px;
+  background-color: #FFFFFF;
 }
 .features__content {
   width: 50%;
@@ -1513,6 +1517,7 @@ html {
 }
 .courses__box {
   border: 1px solid #FEB215;
+  background-color: #FFFFFF;
   padding: 64px 0;
   border-radius: 5px;
   max-width: 350px;
@@ -1703,6 +1708,7 @@ html {
 }
 .courses__price-includes {
   border: 1px solid #FEB215;
+  background-color: #FFFFFF;
   padding: 30px 0;
   text-align: center;
   margin: 50px 0 100px;
