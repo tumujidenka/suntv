@@ -162,7 +162,16 @@
         background-repeat: no-repeat;
     }
 
-    
+ 
+    @media (max-width: 1280px) {
+        &__support-bar{
+            line-height: 50px;
+            .sp{
+                display: inline-block;
+            }
+        }
+    }
+
     @media (max-width: 768px) {
         padding-bottom: 70px;
         &__header{
