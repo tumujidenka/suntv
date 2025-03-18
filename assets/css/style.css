@@ -903,7 +903,7 @@ html {
     display: block;
     position: relative;
     height: 720px;
-    width: 490px;
+    width: 100%;
     margin: 0 auto;
   }
   .chance__feature {
@@ -1472,7 +1472,6 @@ html {
   background-color: #FEB215;
   padding: 20px 0;
   width: 90%;
-  max-width: 670px;
   margin: 0 auto;
   border-radius: 8px;
   display: flex;
@@ -1643,6 +1642,9 @@ html {
   align-items: center;
   margin-bottom: 18px;
 }
+.courses__curriculum-item .sp {
+  display: none;
+}
 .courses__curriculum-item:nth-child(even) {
   display: none;
 }
@@ -1736,9 +1738,14 @@ html {
   .courses__banner-icon {
     width: 40px;
     height: 40px;
+    margin-right: 15px;
   }
   .courses__banner-icon.sp {
     display: inline-block;
+  }
+  .courses__banner-icon.sp img {
+    width: 40px;
+    height: 40px;
   }
   .courses__banner-icon.pc {
     display: none;
@@ -1823,10 +1830,23 @@ html {
   .courses__curriculum-title {
     font-size: 21px;
   }
-  .courses__curriculum-item:nth-child(even) {
-    display: block;
+  .courses__curriculum-item .sp {
+    display: inline-block;
   }
-  .courses__curriculum-line, .courses__curriculum-time {
+  .courses__curriculum-item:nth-child(even) {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: relative;
+    transform: translateY(-15px);
+  }
+  .courses__curriculum-item:nth-child(even) .courses__curriculum-line {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50px);
+  }
+  .courses__curriculum-item:nth-child(odd) .courses__curriculum-line, .courses__curriculum-item:nth-child(odd) .courses__curriculum-time {
     display: none;
   }
   .courses__price {
@@ -1838,6 +1858,7 @@ html {
   }
   .courses__price-value {
     font-size: 48px;
+    letter-spacing: 5px;
   }
   .courses__price-unit {
     font-size: 32px;

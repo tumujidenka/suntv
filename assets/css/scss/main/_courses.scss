@@ -39,7 +39,6 @@
         background-color: var.$sunshineYellow;
         padding: 20px 0;
         width: 90%;
-        max-width: 670px;
         margin: 0 auto;
         border-radius: 8px;
         display: flex;
@@ -221,6 +220,9 @@
             display: flex;
             align-items: center;
             margin-bottom: 18px;
+            .sp{
+                display: none;
+            }
             &:nth-child(even) {
                 display: none;
             }
@@ -317,8 +319,13 @@
             &-icon{
                 width: 40px;
                 height: 40px;
+                margin-right: 15px;
                 &.sp{
                     display: inline-block;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
                 &.pc{
                     display: none;
@@ -424,12 +431,27 @@
                 font-size: 21px;
             }
             &-item{
+                .sp{
+                    display: inline-block;
+                }
                 &:nth-child(even) {
-                    display: block;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    position: relative;
+                    transform: translateY(-15px);
+                    .courses__curriculum-line{
+                        width: 40%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateX(-50px);
+                    }
                 }        
-            }
-            &-line,&-time{
-                display: none;
+                &:nth-child(odd) {
+                    .courses__curriculum-line,.courses__curriculum-time{
+                        display: none;
+                    }
+                }      
             }
         }
         &__price{
@@ -440,6 +462,7 @@
             }
             &-value{
                 font-size: 48px;
+                letter-spacing: 5px;
             }
             &-unit{
                 font-size: 32px;
