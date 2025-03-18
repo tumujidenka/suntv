@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuLinks.forEach(menuLink =>{
         menuLink.addEventListener('click', function(){
-            console.log(menuLink);
             container.classList.toggle('open');
         });
     
