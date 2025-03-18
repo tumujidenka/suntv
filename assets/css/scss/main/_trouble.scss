@@ -6,7 +6,7 @@
     &__header {
         text-align: center;
         margin-bottom: 12px;
-        transform: translateY(-60px);
+        transform: translateY(-35px);
         background-color: var.$white;
         width: 70%;
         min-width: 600px;
@@ -14,11 +14,19 @@
     }
     
     &__header-tag {
+        position: absolute;
+        top: -20px;
+        left: 60px;       
+        width: 120px;
         color: var.$darkGray;
         font-size: 16px;
         margin-bottom: 5px;
+        text-align-last: left;
         span{
             font-size: 8px;
+        }
+        &.sp{
+            display: none;
         }
     }
     
@@ -32,6 +40,7 @@
             width: 50px;
             height: 50px;
             transform: translateY(10px);
+            position: relative;
             img{
                 width: 100%;
             }
@@ -45,7 +54,7 @@
     }
     
     &__question-text {
-        transform: translateY(-40px);
+        transform: translateY(-25px);
         font-family: "Noto Sans JP";
         text-align: center;
         padding: 10px;
@@ -78,13 +87,13 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         padding: 25px 20px;
-        height: 210px;
-        width: 290px;
+        height: 175px;
+        width: 280px;
         font-size: 14px;
         color: var.$darkGray;
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         text-align: center;
         .check{
             display: none;
@@ -106,40 +115,83 @@
     &__bubble-2 {
         background-image: url('../media/bubble2.png');
         top: 25%;
-        left: 74px;
+        left: 50px;
     }
     
     &__bubble-3 {
         background-image: url('../media/bubble3.png');
         top: 68%;
-        left: 4%;
+        left: 2%;
     }
     
     &__bubble-4 {
         background-image: url('../media/bubble4.png');
         top: 25%;
-        right: 74px;
+        right: 50px;
     }
     
     &__bubble-5 {
         background-image: url('../media/bubble5.png');
         top: 68%;
-        right: 4%;
+        right: 2%;
+    }
+
+    @media (max-width: 1390px) {
+        &__question-text{
+            .sp{
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__concerns-container{
+            height: 470px;
+            margin-top: 50px;
+        }
+        &__person-image {
+            height: 300px;
+        }
+        &__speech-bubble {
+            padding: 10px 5px;
+            height: 150px;
+            width: 260px;
+        }
+
+        &__bubble-2 {
+            left: 20px;
+        }
+        
+        &__bubble-4 {
+            right: 20px;
+        }
     }
 
     @media (max-width: 768px) {
         padding-top: 60px;
         padding-bottom: 50px;
         &__header{
-            //透明にしないと
             min-width: 0;
-            transform: translateY(-14px);
+            transform: translateY(8px);
+        }
+        &__question-box{
+            height: 160px;
         }
         &__header-tag{
             background-color: var.$white;
+            left: 50%;
+            transform: translateX(-50%);
+            .pc{
+                display: none;
+            }
+            .sp{
+                display: inline-block;
+                text-align: center;
+            }
         }
         &__header-title{
             font-size: 16px;
+            margin-top: 10px;
             span.check{
                 display: none;
             }
@@ -149,10 +201,7 @@
         }
         &__question-text{
             font-size: 32px;
-            transform: translateY(-8px);
-            .sp{
-                display: block;
-            }
+            transform: translateY(15px);
             .sp-fontsize{
                 font-size: 24px;
             }
