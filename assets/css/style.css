@@ -1451,7 +1451,7 @@ html {
   padding: 36px 0;
   position: relative;
   border-top: 1px solid #FEB215;
-  border-bottom: 1px solid #F8DD49;
+  border-bottom: 1px solid #FEB215;
   width: 50%;
   margin: 0 auto;
 }
@@ -1469,7 +1469,7 @@ html {
 }
 .courses__title::after {
   bottom: 10px;
-  background: #FEB215;
+  background: #F8DD49;
 }
 .courses__banner {
   background-color: #FEB215;
@@ -2049,8 +2049,9 @@ html {
 .faq__answer {
   background-color: white;
   padding: 12px 24px;
-  border: 1px solid #e0e0e0;
-  border-top: none;
+  border: 1px solid #2FB191;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   display: flex;
 }
 .faq__answer.flex-center {
@@ -2087,6 +2088,21 @@ html {
 @media (max-width: 768px) {
   .faq__answer.flex-center {
     align-items: start;
+  }
+  .faq__answer-content p {
+    font-size: 14px;
+  }
+  .faq__answer-content p .faq__note p {
+    font-size: 12px;
+  }
+  .faq__answer-content p .faq__button p {
+    font-size: 12px;
+  }
+  .faq__question-label, .faq__question-text, .faq__answer-label, .faq__answer-text {
+    font-size: 16px;
+  }
+  .faq__question-text {
+    padding: 0;
   }
 }
 .footer__image {

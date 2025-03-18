@@ -12,7 +12,7 @@
         padding: 36px 0;
         position: relative;
         border-top: 1px solid var.$sunshineYellow;
-        border-bottom: 1px solid var.$mimosaYellow;
+        border-bottom: 1px solid var.$sunshineYellow;
         width: 50%;
         margin: 0 auto;
     }
@@ -32,7 +32,7 @@
     
     &__title::after {
         bottom: 10px;
-        background: var.$sunshineYellow;
+        background: var.$mimosaYellow;
     }
     
     &__banner {

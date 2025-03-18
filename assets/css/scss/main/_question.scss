@@ -51,8 +51,9 @@
     &__answer {
         background-color: white;
         padding: 12px 24px;
-        border: 1px solid #e0e0e0;
-        border-top: none;
+        border: 1px solid var.$mintGreen;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
         display: flex;
         &.flex-center{
             align-items: center;
@@ -97,7 +98,29 @@
             &.flex-center{
                 align-items: start;
             }
+            &-content p{
+                font-size: 14px;
+                .faq__note p{
+                    font-size: 12px;
+                }
+            
+                .faq__button p{
+                    font-size: 12px;
+                }
+            }
         }
+        &__question-label,
+        &__question-text,
+        &__answer-label,
+        &__answer-text{
+            font-size: 16px;
+        }
+        &__question{
+            &-text{
+                padding: 0;
+            }
+        }
+
     }
 
 
