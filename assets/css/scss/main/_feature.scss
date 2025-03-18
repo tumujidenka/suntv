@@ -46,12 +46,18 @@
         font-weight: bold;
         text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
         position: relative;
+        &-box{
+            .br{
+                display: none;
+            }
+        }
+
     }
 
     &__section {
         display: flex;
         padding: 30px 20px;
-        gap: 40px;
+        gap: 2%;
         border: 2px solid var.$sunshineYellow;
         border-radius: 10px;
         margin-bottom: 50px;
@@ -163,8 +169,13 @@
             p span.highlight{
                 color: var.$orangeRed;
             }
-            p span.sp{
+            .sp{
                 display: none;
+            }
+            &-box{
+                .br{
+                    display: inline-block;
+                }
             }
         }
         &-name {
@@ -259,6 +270,21 @@
         display: flex;
     }
 
+    @media (max-width: 1360px) {
+        &__hotel-title{
+            .br{
+                display: inline-block;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__title-box{
+            .br{
+                display: inline-block;
+            }
+        }
+    }
 
     @media (max-width: 768px) {
         padding-bottom: 70px;
@@ -283,6 +309,9 @@
                 font-size: 21px;
                 span.large{
                     font-size: 40px;
+                }
+                .br{
+                    display: none;
                 }
             }
         }
@@ -311,11 +340,14 @@
                     text-align-last: left;
                     line-height: 32px;
                 }
-                p span.sp{
-                    display: inline-block;
-                }
                 &>p{
                     padding: 0 50px;
+                }
+                .br{
+                    display: none;
+                }
+                .sp{
+                    display: inline-block;
                 }
             }
             &-name{
@@ -338,6 +370,7 @@
                 display: block;
                 margin-top: 30px;
                 margin-bottom: 30px;
+                font-size: 18px;
             }
 
             &-content{
