@@ -1,7 +1,6 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('aaa');
 
     // ハンバーガーメニューの開閉
     const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -10,6 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburgerMenu.addEventListener('click', function(){
         container.classList.toggle('open');
     });
+
+    // メニューリンク押下時に、ハンバーガーメニューを閉じる
+    const menuLinks = document.querySelectorAll('.side-nav__menu-item a');
+
+    menuLinks.forEach(menuLink =>{
+        menuLink.addEventListener('click', function(){
+            console.log(menuLink);
+            container.classList.toggle('open');
+        });
+    
+    })
 
 
 });
